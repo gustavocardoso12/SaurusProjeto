@@ -16,6 +16,7 @@ namespace Validacao
 			int soma;
 			int resto;
 
+
 			cpf = cpf.Trim();
 			cpf = cpf.Replace(".", "").Replace("-", "");
 
