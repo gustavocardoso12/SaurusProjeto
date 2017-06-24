@@ -55,7 +55,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="cPFTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="-176,-9,-121,-33" Grid.Row="0" Text="{Binding CPF, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="297" FontSize="32" TextChanged="cPFTextBox_TextChanged"/>
+            <TextBox x:Name="cPFTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="-176,-33,-121,-9" Grid.Row="0" Text="{Binding CPF, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="297" FontSize="32" TextChanged="cPFTextBox_TextChanged"/>
         </Grid>
         <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="770,438,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -65,7 +65,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="65" Margin="-237,-8,-352,-28" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="589" FontSize="32"/>
+            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="65" Margin="-249,-26,-340,-10" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="589" FontSize="32"/>
         </Grid>
         <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="758,574,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -75,7 +75,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <DatePicker x:Name="data_NascimentoDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="-229,-16,-125,0" Grid.Row="0" SelectedDate="{Binding Data_Nascimento, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Height="46" Width="354" FontSize="32"/>
+            <DatePicker x:Name="data_NascimentoDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="-229,-28,-125,12" Grid.Row="0" SelectedDate="{Binding Data_Nascimento, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Height="46" Width="354" FontSize="32"/>
         </Grid>
         <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="301,280,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
