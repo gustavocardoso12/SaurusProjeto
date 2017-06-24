@@ -1,0 +1,75 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Saurus.Pesquisar"
+      xmlns:Saurus="clr-namespace:Saurus" x:Class="Saurus.Pesquisar.Pesquisar"
+      mc:Ignorable="d"
+      Title="Pesquisar" Height="828" Width="1344" Foreground="White" Background="#FF294747">
+
+    <Page.Resources>
+        <Saurus:Saurus_BancoDataSet x:Key="saurus_BancoDataSet"/>
+        <CollectionViewSource x:Key="saurus_tabela_clientesViewSource" Source="{Binding Saurus_tabela_clientes, Source={StaticResource saurus_BancoDataSet}}"/>
+    </Page.Resources>
+
+    <Grid Background="#FF472929" Margin="0,5,0,-5">
+        <TextBlock x:Name="textBlock" Width="683" VerticalAlignment="Top" Text="Critério de busca" TextWrapping="Wrap" Margin="324,66,0,0" Height="115" HorizontalAlignment="Left" FontSize="80" FontWeight="Bold" Foreground="White"/>
+
+        <RadioButton x:Name="Rbn_CPF" Content="CPF" HorizontalAlignment="Left" Margin="92,339,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32" FontWeight="Bold" Height="54" Width="310" Style="{DynamicResource RadioButtonStyle2}" Checked="Rbn_CPF_Checked"/>
+        <RadioButton x:Name="Rbn_Nome" Content="Nome" HorizontalAlignment="Left" Margin="92,459,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32" FontWeight="Bold" Height="54" Width="142" Style="{DynamicResource RadioButtonStyle3}" Checked="Rbn_Nome_Checked"/>
+        <RadioButton x:Name="Rbn_Data" Content="Data de Nascimento" HorizontalAlignment="Left" Margin="92,575,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32" FontWeight="Bold" Height="54" Width="386" Style="{DynamicResource RadioButtonStyle4}" Checked="Rbn_Data_Checked"/>
+        <RadioButton x:Name="Rbn_Numero" Content="Número interno" HorizontalAlignment="Left" Margin="92,216,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32" FontWeight="Bold" Height="79" Width="278" Style="{DynamicResource RadioButtonStyle1}" Checked="Rbn_Numero_Checked"/>
+
+        <Grid x:Name="grid1" DataContext="{StaticResource saurus_tabela_clientesViewSource}" HorizontalAlignment="Left" Margin="648,233,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="numero_internoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="-89,-13,0,-13" Grid.Row="0" Text="{Binding Numero_interno, Mode=OneWay}" VerticalAlignment="Center" Width="120" FontSize="32" Visibility="Hidden"/>
+        </Grid>
+        <Grid x:Name="grid3" DataContext="{StaticResource saurus_tabela_clientesViewSource}" HorizontalAlignment="Left" Margin="560,474,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="nomeTextBox" HorizontalAlignment="Left" Height="50" Margin="10,-18,-516,0" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="552" FontSize="32" Grid.Column="1" Visibility="Hidden"/>
+        </Grid>
+        <Grid x:Name="grid4" DataContext="{StaticResource saurus_tabela_clientesViewSource}" HorizontalAlignment="Left" Margin="558,596,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <DatePicker x:Name="data_NascimentoDatePicker" HorizontalAlignment="Left" Margin="10,-27,-320,10" Grid.Row="0" SelectedDate="{Binding Data_Nascimento, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Height="49" Width="434" FontSize="32" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        </Grid>
+        <Grid x:Name="grid2" DataContext="{StaticResource saurus_tabela_clientesViewSource}" HorizontalAlignment="Left" Margin="560,350,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="31" Width="406">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.476"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="91"/>
+                <ColumnDefinition Width="Auto" MinWidth="141"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="cPFTextBox" HorizontalAlignment="Left" Margin="2,-19,-48,-32" Grid.Row="0" Text="{Binding CPF, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Width="286" FontSize="32" RenderTransformOrigin="0.52,-0.143" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        </Grid>
+        <Button x:Name="Pesquisarbtn" Content="Pesquisar" HorizontalAlignment="Left" Margin="421,642,0,0" VerticalAlignment="Top" Width="402" FontSize="40" Background="#FF2A3C91" Foreground="White" FontWeight="Bold" BorderBrush="#FF472929" Height="66" Click="Pesquisarbtn_Click"/>
+
+    </Grid>
+</Page>

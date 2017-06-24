@@ -1,0 +1,104 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Saurus.Atualizar"
+      xmlns:Saurus="clr-namespace:Saurus" x:Class="Saurus.Atualizar.atualizar"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="atualizar">
+
+    <Page.Resources>
+        <Saurus:Saurus_BancoDataSet x:Key="saurus_BancoDataSet"/>
+        <CollectionViewSource x:Key="saurus_tabela_clientesViewSource" Source="{Binding Saurus_tabela_clientes, Source={StaticResource saurus_BancoDataSet}}"/>
+    </Page.Resources>
+
+    <Grid Background="#FF472929" Margin="10,0,-1242,-478" DataContext="{StaticResource saurus_tabela_clientesViewSource}" Height="778" VerticalAlignment="Top">
+        <Grid x:Name="grid1" DataContext="{StaticResource saurus_tabela_clientesViewSource}" HorizontalAlignment="Left" Margin="346,170,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="298,81,0,0" TextWrapping="Wrap" Text="Atualização de dados" VerticalAlignment="Top" Foreground="White" FontSize="80" FontWeight="Bold" Height="115" Width="852"/>
+        <Button x:Name="anterior" Content="&#xE096;" HorizontalAlignment="Left" Margin="21,190,0,0" VerticalAlignment="Top" Width="137" FontSize="40" Background="#FF2A3C91" Foreground="White" FontWeight="Bold" BorderBrush="#FF472929" Height="66" Click="anterior_Click" FontFamily="Segoe MDL2 Assets" />
+        <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="150,224,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label x:Name="CPF_Label" Content="CPF" HorizontalAlignment="Left" Margin="21,305,0,0" VerticalAlignment="Top" Height="61" Width="168" FontSize="32" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="Nome_label" Content="Nome completo" HorizontalAlignment="Left" Margin="18,430,0,0" VerticalAlignment="Top" Height="60" Width="463" FontSize="32" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="data_nasc_label" Content="Data de Nascimento" HorizontalAlignment="Left" Margin="18,548,0,0" VerticalAlignment="Top" Height="60" Width="521" FontSize="32" FontWeight="Bold" Foreground="White"/>
+        <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="690,432,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="706,326,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="cPFTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="-176,-9,-121,-33" Grid.Row="0" Text="{Binding CPF, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="297" FontSize="32" TextChanged="cPFTextBox_TextChanged"/>
+        </Grid>
+        <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="770,438,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="65" Margin="-237,-8,-352,-28" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="589" FontSize="32"/>
+        </Grid>
+        <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="758,574,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <DatePicker x:Name="data_NascimentoDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="-229,-16,-125,0" Grid.Row="0" SelectedDate="{Binding Data_Nascimento, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Height="46" Width="354" FontSize="32"/>
+        </Grid>
+        <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="301,280,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Button x:Name="Proximo" Content="&#xE09B;" HorizontalAlignment="Left" Margin="155,190,0,0" VerticalAlignment="Top" Width="130" FontSize="40" Background="#FF2A3C91" Foreground="White" FontWeight="Bold" BorderBrush="#FF472929" Height="66" Click="Proximo_Click" FontFamily="Segoe MDL2 Assets" />
+        <Button x:Name="Atualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="414,661,0,0" VerticalAlignment="Top" Width="538" FontSize="40" Background="#FF2A3C91" Foreground="White" FontWeight="Bold" BorderBrush="#FF472929" Height="82" Click="Atualizar_Click"  />
+        <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="246,220,0,0" VerticalAlignment="Top" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Numero interno:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="numero_internoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Numero_interno, Mode=OneWay}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
+
+    </Grid>
+</Page>
