@@ -28,7 +28,7 @@ namespace Saurus.Pesquisar
 
         private void Rbn_Numero_Checked(object sender, RoutedEventArgs e)
         {
-            // tornando o controle numero visível e os outros ficam escondidos, todos são esvaziados
+            // tornando o controle numero visível e os outros fica escondidos, todos são esvaziados
             numero_internoTextBox.Visibility = Visibility.Visible;
             numero_internoTextBox.Text = "";
             cPFTextBox.Visibility = Visibility.Hidden;
