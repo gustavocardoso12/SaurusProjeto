@@ -30,7 +30,7 @@ namespace Saurus.Inserir
         private void Inserirbtn_Click(object sender, RoutedEventArgs e)
         {
             try {
-                string conexao_string = "Data Source=H;Initial Catalog=Saurus_Banco;Integrated Security=True";
+                string conexao_string = "Data Source = H\\SQLEXPRESS; Initial Catalog = Saurus_Banco; Integrated Security = True";
                 SqlConnection conexao = new SqlConnection(conexao_string);
                 // se os valores estiverem vazios
                 if ((cPFTextBox.Text == "") || (NomeTextBox.Text == "") || (data.Text == "01/01/1900"))
@@ -64,7 +64,7 @@ namespace Saurus.Inserir
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show("Dados ja cadastrados", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message.ToString(), "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

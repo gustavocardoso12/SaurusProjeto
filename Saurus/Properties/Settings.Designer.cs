@@ -32,5 +32,37 @@ namespace Saurus.Properties {
                 return ((string)(this["Saurus_BancoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=H\\SQLEXPRESS;Initial Catalog=Saurus_Banco;Integrated Security=True")]
+        public string Saurus_BancoConnectionString1 {
+            get {
+                return ((string)(this["Saurus_BancoConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=H\\SQLEXPRESS;Initial Catalog=Saurus_BD;Integrated Security=True;Pooli" +
+            "ng=False")]
+        public string Saurus_BDConnectionString {
+            get {
+                return ((string)(this["Saurus_BDConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\Saurus;AttachDbFilename=|DataDirectory|\\Saurus_BD.mdf;Integ" +
+            "rated Security=True;Connect Timeout=30")]
+        public string Saurus_BDConnectionString1 {
+            get {
+                return ((string)(this["Saurus_BDConnectionString1"]));
+            }
+        }
     }
 }

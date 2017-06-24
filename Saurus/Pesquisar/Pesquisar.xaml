@@ -9,7 +9,7 @@
       Title="Pesquisar" Height="828" Width="1344" Foreground="White" Background="#FF294747">
 
     <Page.Resources>
-        <Saurus:Saurus_BancoDataSet x:Key="saurus_BancoDataSet"/>
+        <Saurus:Saurus_BancoDataSet1 x:Key="saurus_BancoDataSet"/>
         <CollectionViewSource x:Key="saurus_tabela_clientesViewSource" Source="{Binding Saurus_tabela_clientes, Source={StaticResource saurus_BancoDataSet}}"/>
     </Page.Resources>
 

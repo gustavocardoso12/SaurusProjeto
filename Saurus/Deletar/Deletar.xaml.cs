@@ -24,19 +24,14 @@ namespace Saurus.Deletar
         {
             InitializeComponent();
             // carregando os dados da tabela
-            Saurus.Saurus_BancoDataSet saurus_BancoDataSet = ((Saurus.Saurus_BancoDataSet)(this.FindResource("saurus_BancoDataSet")));
-            // Load data into the table Saurus_tabela_clientes. You can modify this code as needed.
-            Saurus.Saurus_BancoDataSetTableAdapters.Saurus_tabela_clientesTableAdapter saurus_BancoDataSetSaurus_tabela_clientesTableAdapter = new Saurus.Saurus_BancoDataSetTableAdapters.Saurus_tabela_clientesTableAdapter();
-            saurus_BancoDataSetSaurus_tabela_clientesTableAdapter.Fill(saurus_BancoDataSet.Saurus_tabela_clientes);
-            System.Windows.Data.CollectionViewSource saurus_tabela_clientesViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("saurus_tabela_clientesViewSource")));
-            saurus_tabela_clientesViewSource.View.MoveCurrentToFirst();
+        
         }
 
         private void Deletarbtn_Click(object sender, RoutedEventArgs e)
         {
             try {
                 //deletando os dados segundo seu número interno
-                string conexao_string = "Data Source=H;Initial Catalog=Saurus_Banco;Integrated Security=True";
+                string conexao_string = "Data Source = H\\SQLEXPRESS; Initial Catalog = Saurus_Banco; Integrated Security = True";
                 SqlConnection conexao = new SqlConnection(conexao_string);
                 string sql = "Delete from Saurus_tabela_clientes where Numero_interno = @Numero_interno";
                 SqlCommand comando = new SqlCommand(sql, conexao);

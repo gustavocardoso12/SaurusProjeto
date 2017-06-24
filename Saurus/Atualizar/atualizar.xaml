@@ -9,13 +9,10 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="atualizar">
 
-    <Page.Resources>
-        <Saurus:Saurus_BancoDataSet x:Key="saurus_BancoDataSet"/>
-        <CollectionViewSource x:Key="saurus_tabela_clientesViewSource" Source="{Binding Saurus_tabela_clientes, Source={StaticResource saurus_BancoDataSet}}"/>
-    </Page.Resources>
+    
 
-    <Grid Background="#FF472929" Margin="10,0,-1242,-478" DataContext="{StaticResource saurus_tabela_clientesViewSource}" Height="778" VerticalAlignment="Top">
-        <Grid x:Name="grid1" DataContext="{StaticResource saurus_tabela_clientesViewSource}" HorizontalAlignment="Left" Margin="346,170,0,0" VerticalAlignment="Top">
+    <Grid Background="#FF472929" Margin="10,0,-1242,-478" Height="778" VerticalAlignment="Top">
+        <Grid x:Name="grid1"  HorizontalAlignment="Left" Margin="346,170,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>

@@ -83,7 +83,7 @@ namespace Saurus.Pesquisar
                 if (Rbn_Numero.IsChecked == true)
                 {
                     //lendo pelo número interno
-                    string conexao_string = "Data Source=H;Initial Catalog=Saurus_Banco;Integrated Security=True";
+                    string conexao_string = "Data Source = H\\SQLEXPRESS; Initial Catalog = Saurus_Banco; Integrated Security = True";
                     SqlConnection conexao = new SqlConnection(conexao_string);
                     string sql = "select * from Saurus_tabela_clientes where Numero_interno = @Numero_interno ";
 
@@ -135,7 +135,7 @@ namespace Saurus.Pesquisar
                     if (Rbn_CPF.IsChecked == true)
                     {
                         //lendo pelo cpf
-                        string conexao_string = "Data Source=H;Initial Catalog=Saurus_Banco;Integrated Security=True";
+                        string conexao_string = "Data Source = H\\SQLEXPRESS; Initial Catalog = Saurus_Banco; Integrated Security = True";
                         SqlConnection conexao_cpf = new SqlConnection(conexao_string);
                         string sql_cpf = "select * from Saurus_tabela_clientes where CPF = @CPF";
 
@@ -185,7 +185,7 @@ namespace Saurus.Pesquisar
                         if (Rbn_Data.IsChecked == true)
                         {
                             //lendo pela data
-                            string conexao_string = "Data Source=H;Initial Catalog=Saurus_Banco;Integrated Security=True";
+                            string conexao_string = "Data Source = H\\SQLEXPRESS; Initial Catalog = Saurus_Banco; Integrated Security = True";
                             SqlConnection conexao_data = new SqlConnection(conexao_string);
                             string sql_data = "select * from Saurus_tabela_clientes where Data_Nascimento = @Data_Nascimento ";
 
@@ -234,7 +234,7 @@ namespace Saurus.Pesquisar
                         else
                         {
                             //busca pelo nome
-                            string conexao_string = "Data Source=H;Initial Catalog=Saurus_Banco;Integrated Security=True";
+                            string conexao_string = "Data Source = H\\SQLEXPRESS; Initial Catalog = Saurus_Banco; Integrated Security = True";
                             SqlConnection conexao_nome = new SqlConnection(conexao_string);
                             string sql_nome = "select * from Saurus_tabela_clientes where Nome = @Nome ";
                             SqlCommand comando_nome = new SqlCommand(sql_nome, conexao_nome);

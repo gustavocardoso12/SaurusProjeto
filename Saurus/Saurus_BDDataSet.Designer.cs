@@ -20,17 +20,17 @@ namespace Saurus {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Saurus_BancoDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Saurus_BDDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Saurus_BancoDataSet : global::System.Data.DataSet {
+    public partial class Saurus_BDDataSet : global::System.Data.DataSet {
         
-        private Saurus_tabela_clientesDataTable tableSaurus_tabela_clientes;
+        private ClienteDataTable tableCliente;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Saurus_BancoDataSet() {
+        public Saurus_BDDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Saurus {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected Saurus_BancoDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Saurus_BDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Saurus {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Saurus_tabela_clientes"] != null)) {
-                    base.Tables.Add(new Saurus_tabela_clientesDataTable(ds.Tables["Saurus_tabela_clientes"]));
+                if ((ds.Tables["Cliente"] != null)) {
+                    base.Tables.Add(new ClienteDataTable(ds.Tables["Cliente"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Saurus {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Saurus_tabela_clientesDataTable Saurus_tabela_clientes {
+        public ClienteDataTable Cliente {
             get {
-                return this.tableSaurus_tabela_clientes;
+                return this.tableCliente;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Saurus {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Saurus_BancoDataSet cln = ((Saurus_BancoDataSet)(base.Clone()));
+            Saurus_BDDataSet cln = ((Saurus_BDDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Saurus {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Saurus_tabela_clientes"] != null)) {
-                    base.Tables.Add(new Saurus_tabela_clientesDataTable(ds.Tables["Saurus_tabela_clientes"]));
+                if ((ds.Tables["Cliente"] != null)) {
+                    base.Tables.Add(new ClienteDataTable(ds.Tables["Cliente"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Saurus {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSaurus_tabela_clientes = ((Saurus_tabela_clientesDataTable)(base.Tables["Saurus_tabela_clientes"]));
+            this.tableCliente = ((ClienteDataTable)(base.Tables["Cliente"]));
             if ((initTable == true)) {
-                if ((this.tableSaurus_tabela_clientes != null)) {
-                    this.tableSaurus_tabela_clientes.InitVars();
+                if ((this.tableCliente != null)) {
+                    this.tableCliente.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Saurus {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Saurus_BancoDataSet";
+            this.DataSetName = "Saurus_BDDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Saurus_BancoDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Saurus_BDDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSaurus_tabela_clientes = new Saurus_tabela_clientesDataTable();
-            base.Tables.Add(this.tableSaurus_tabela_clientes);
+            this.tableCliente = new ClienteDataTable();
+            base.Tables.Add(this.tableCliente);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeSaurus_tabela_clientes() {
+        private bool ShouldSerializeCliente() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Saurus {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Saurus_BancoDataSet ds = new Saurus_BancoDataSet();
+            Saurus_BDDataSet ds = new Saurus_BDDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace Saurus {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Saurus_tabela_clientesRowChangeEventHandler(object sender, Saurus_tabela_clientesRowChangeEvent e);
+        public delegate void ClienteRowChangeEventHandler(object sender, ClienteRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Saurus_tabela_clientesDataTable : global::System.Data.TypedTableBase<Saurus_tabela_clientesRow> {
+        public partial class ClienteDataTable : global::System.Data.TypedTableBase<ClienteRow> {
             
             private global::System.Data.DataColumn columnNumero_interno;
             
@@ -289,8 +289,8 @@ namespace Saurus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesDataTable() {
-                this.TableName = "Saurus_tabela_clientes";
+            public ClienteDataTable() {
+                this.TableName = "Cliente";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace Saurus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Saurus_tabela_clientesDataTable(global::System.Data.DataTable table) {
+            internal ClienteDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +315,7 @@ namespace Saurus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Saurus_tabela_clientesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ClienteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -363,55 +363,55 @@ namespace Saurus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesRow this[int index] {
+            public ClienteRow this[int index] {
                 get {
-                    return ((Saurus_tabela_clientesRow)(this.Rows[index]));
+                    return ((ClienteRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Saurus_tabela_clientesRowChangeEventHandler Saurus_tabela_clientesRowChanging;
+            public event ClienteRowChangeEventHandler ClienteRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Saurus_tabela_clientesRowChangeEventHandler Saurus_tabela_clientesRowChanged;
+            public event ClienteRowChangeEventHandler ClienteRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Saurus_tabela_clientesRowChangeEventHandler Saurus_tabela_clientesRowDeleting;
+            public event ClienteRowChangeEventHandler ClienteRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Saurus_tabela_clientesRowChangeEventHandler Saurus_tabela_clientesRowDeleted;
+            public event ClienteRowChangeEventHandler ClienteRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddSaurus_tabela_clientesRow(Saurus_tabela_clientesRow row) {
+            public void AddClienteRow(ClienteRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesRow AddSaurus_tabela_clientesRow(string CPF, string Nome, System.DateTime Data_Nascimento) {
-                Saurus_tabela_clientesRow rowSaurus_tabela_clientesRow = ((Saurus_tabela_clientesRow)(this.NewRow()));
+            public ClienteRow AddClienteRow(string CPF, string Nome, System.DateTime Data_Nascimento) {
+                ClienteRow rowClienteRow = ((ClienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CPF,
                         Nome,
                         Data_Nascimento};
-                rowSaurus_tabela_clientesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSaurus_tabela_clientesRow);
-                return rowSaurus_tabela_clientesRow;
+                rowClienteRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowClienteRow);
+                return rowClienteRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesRow FindByNumero_interno(int Numero_interno) {
-                return ((Saurus_tabela_clientesRow)(this.Rows.Find(new object[] {
+            public ClienteRow FindByNumero_interno(int Numero_interno) {
+                return ((ClienteRow)(this.Rows.Find(new object[] {
                             Numero_interno})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Saurus_tabela_clientesDataTable cln = ((Saurus_tabela_clientesDataTable)(base.Clone()));
+                ClienteDataTable cln = ((ClienteDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,7 +419,7 @@ namespace Saurus {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Saurus_tabela_clientesDataTable();
+                return new ClienteDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -450,37 +450,34 @@ namespace Saurus {
                 this.columnNumero_interno.AllowDBNull = false;
                 this.columnNumero_interno.ReadOnly = true;
                 this.columnNumero_interno.Unique = true;
-                this.columnCPF.AllowDBNull = false;
                 this.columnCPF.MaxLength = 11;
-                this.columnNome.AllowDBNull = false;
                 this.columnNome.MaxLength = 50;
-                this.columnData_Nascimento.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesRow NewSaurus_tabela_clientesRow() {
-                return ((Saurus_tabela_clientesRow)(this.NewRow()));
+            public ClienteRow NewClienteRow() {
+                return ((ClienteRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Saurus_tabela_clientesRow(builder);
+                return new ClienteRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Saurus_tabela_clientesRow);
+                return typeof(ClienteRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Saurus_tabela_clientesRowChanged != null)) {
-                    this.Saurus_tabela_clientesRowChanged(this, new Saurus_tabela_clientesRowChangeEvent(((Saurus_tabela_clientesRow)(e.Row)), e.Action));
+                if ((this.ClienteRowChanged != null)) {
+                    this.ClienteRowChanged(this, new ClienteRowChangeEvent(((ClienteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +485,8 @@ namespace Saurus {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Saurus_tabela_clientesRowChanging != null)) {
-                    this.Saurus_tabela_clientesRowChanging(this, new Saurus_tabela_clientesRowChangeEvent(((Saurus_tabela_clientesRow)(e.Row)), e.Action));
+                if ((this.ClienteRowChanging != null)) {
+                    this.ClienteRowChanging(this, new ClienteRowChangeEvent(((ClienteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,8 +494,8 @@ namespace Saurus {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Saurus_tabela_clientesRowDeleted != null)) {
-                    this.Saurus_tabela_clientesRowDeleted(this, new Saurus_tabela_clientesRowChangeEvent(((Saurus_tabela_clientesRow)(e.Row)), e.Action));
+                if ((this.ClienteRowDeleted != null)) {
+                    this.ClienteRowDeleted(this, new ClienteRowChangeEvent(((ClienteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -506,14 +503,14 @@ namespace Saurus {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Saurus_tabela_clientesRowDeleting != null)) {
-                    this.Saurus_tabela_clientesRowDeleting(this, new Saurus_tabela_clientesRowChangeEvent(((Saurus_tabela_clientesRow)(e.Row)), e.Action));
+                if ((this.ClienteRowDeleting != null)) {
+                    this.ClienteRowDeleting(this, new ClienteRowChangeEvent(((ClienteRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveSaurus_tabela_clientesRow(Saurus_tabela_clientesRow row) {
+            public void RemoveClienteRow(ClienteRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -522,7 +519,7 @@ namespace Saurus {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Saurus_BancoDataSet ds = new Saurus_BancoDataSet();
+                Saurus_BDDataSet ds = new Saurus_BDDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -540,7 +537,7 @@ namespace Saurus {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Saurus_tabela_clientesDataTable";
+                attribute2.FixedValue = "ClienteDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -584,25 +581,25 @@ namespace Saurus {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Saurus_tabela_clientesRow : global::System.Data.DataRow {
+        public partial class ClienteRow : global::System.Data.DataRow {
             
-            private Saurus_tabela_clientesDataTable tableSaurus_tabela_clientes;
+            private ClienteDataTable tableCliente;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Saurus_tabela_clientesRow(global::System.Data.DataRowBuilder rb) : 
+            internal ClienteRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSaurus_tabela_clientes = ((Saurus_tabela_clientesDataTable)(this.Table));
+                this.tableCliente = ((ClienteDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Numero_interno {
                 get {
-                    return ((int)(this[this.tableSaurus_tabela_clientes.Numero_internoColumn]));
+                    return ((int)(this[this.tableCliente.Numero_internoColumn]));
                 }
                 set {
-                    this[this.tableSaurus_tabela_clientes.Numero_internoColumn] = value;
+                    this[this.tableCliente.Numero_internoColumn] = value;
                 }
             }
             
@@ -610,10 +607,15 @@ namespace Saurus {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string CPF {
                 get {
-                    return ((string)(this[this.tableSaurus_tabela_clientes.CPFColumn]));
+                    try {
+                        return ((string)(this[this.tableCliente.CPFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPF\' in table \'Cliente\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableSaurus_tabela_clientes.CPFColumn] = value;
+                    this[this.tableCliente.CPFColumn] = value;
                 }
             }
             
@@ -621,10 +623,15 @@ namespace Saurus {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Nome {
                 get {
-                    return ((string)(this[this.tableSaurus_tabela_clientes.NomeColumn]));
+                    try {
+                        return ((string)(this[this.tableCliente.NomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nome\' in table \'Cliente\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableSaurus_tabela_clientes.NomeColumn] = value;
+                    this[this.tableCliente.NomeColumn] = value;
                 }
             }
             
@@ -632,11 +639,52 @@ namespace Saurus {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime Data_Nascimento {
                 get {
-                    return ((global::System.DateTime)(this[this.tableSaurus_tabela_clientes.Data_NascimentoColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableCliente.Data_NascimentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Data_Nascimento\' in table \'Cliente\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableSaurus_tabela_clientes.Data_NascimentoColumn] = value;
+                    this[this.tableCliente.Data_NascimentoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCPFNull() {
+                return this.IsNull(this.tableCliente.CPFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCPFNull() {
+                this[this.tableCliente.CPFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNomeNull() {
+                return this.IsNull(this.tableCliente.NomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNomeNull() {
+                this[this.tableCliente.NomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsData_NascimentoNull() {
+                return this.IsNull(this.tableCliente.Data_NascimentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetData_NascimentoNull() {
+                this[this.tableCliente.Data_NascimentoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -644,22 +692,22 @@ namespace Saurus {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Saurus_tabela_clientesRowChangeEvent : global::System.EventArgs {
+        public class ClienteRowChangeEvent : global::System.EventArgs {
             
-            private Saurus_tabela_clientesRow eventRow;
+            private ClienteRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesRowChangeEvent(Saurus_tabela_clientesRow row, global::System.Data.DataRowAction action) {
+            public ClienteRowChangeEvent(ClienteRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Saurus_tabela_clientesRow Row {
+            public ClienteRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -675,7 +723,7 @@ namespace Saurus {
         }
     }
 }
-namespace Saurus.Saurus_BancoDataSetTableAdapters {
+namespace Saurus.Saurus_BDDataSetTableAdapters {
     
     
     /// <summary>
@@ -687,7 +735,7 @@ namespace Saurus.Saurus_BancoDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Saurus_tabela_clientesTableAdapter : global::System.ComponentModel.Component {
+    public partial class ClienteTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -701,7 +749,7 @@ namespace Saurus.Saurus_BancoDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Saurus_tabela_clientesTableAdapter() {
+        public ClienteTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -798,7 +846,7 @@ namespace Saurus.Saurus_BancoDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Saurus_tabela_clientes";
+            tableMapping.DataSetTable = "Cliente";
             tableMapping.ColumnMappings.Add("Numero_interno", "Numero_interno");
             tableMapping.ColumnMappings.Add("CPF", "CPF");
             tableMapping.ColumnMappings.Add("Nome", "Nome");
@@ -806,34 +854,38 @@ namespace Saurus.Saurus_BancoDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Saurus_tabela_clientes] WHERE (([Numero_interno] = @Original_N" +
-                "umero_interno) AND ([CPF] = @Original_CPF) AND ([Nome] = @Original_Nome) AND ([D" +
-                "ata_Nascimento] = @Original_Data_Nascimento))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Cliente] WHERE (([Numero_interno] = @Original_Numero_interno) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_Nome = 1 AND [Nome] IS NULL) OR ([Nome] = @Original_Nome)) AND ((@IsNull_Data_Nascimento = 1 AND [Data_Nascimento] IS NULL) OR ([Data_Nascimento] = @Original_Data_Nascimento)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Numero_interno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_interno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CPF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nome", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Nascimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Nascimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Nascimento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Nascimento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Saurus_tabela_clientes] ([CPF], [Nome], [Data_Nascimento]) VAL" +
-                "UES (@CPF, @Nome, @Data_Nascimento);\r\nSELECT Numero_interno, CPF, Nome, Data_Nas" +
-                "cimento FROM Saurus_tabela_clientes WHERE (Numero_interno = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Cliente] ([CPF], [Nome], [Data_Nascimento]) VALUES (@CPF, @Nom" +
+                "e, @Data_Nascimento);\r\nSELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Cl" +
+                "iente WHERE (Numero_interno = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Nascimento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Nascimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Saurus_tabela_clientes] SET [CPF] = @CPF, [Nome] = @Nome, [Data_Nascimento] = @Data_Nascimento WHERE (([Numero_interno] = @Original_Numero_interno) AND ([CPF] = @Original_CPF) AND ([Nome] = @Original_Nome) AND ([Data_Nascimento] = @Original_Data_Nascimento));
-SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WHERE (Numero_interno = @Numero_interno)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Cliente] SET [CPF] = @CPF, [Nome] = @Nome, [Data_Nascimento] = @Data_Nascimento WHERE (([Numero_interno] = @Original_Numero_interno) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_Nome = 1 AND [Nome] IS NULL) OR ([Nome] = @Original_Nome)) AND ((@IsNull_Data_Nascimento = 1 AND [Data_Nascimento] IS NULL) OR ([Data_Nascimento] = @Original_Data_Nascimento)));
+SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Cliente WHERE (Numero_interno = @Numero_interno)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Nascimento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Nascimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Numero_interno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_interno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CPF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nome", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Nascimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Nascimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Nascimento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Nascimento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_interno", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -842,7 +894,7 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Saurus.Properties.Settings.Default.Saurus_BancoConnectionString;
+            this._connection.ConnectionString = global::Saurus.Properties.Settings.Default.Saurus_BDConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -851,8 +903,7 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM dbo.Saurus_tabela_clientes" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM dbo.Cliente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -860,7 +911,7 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Saurus_BancoDataSet.Saurus_tabela_clientesDataTable dataTable) {
+        public virtual int Fill(Saurus_BDDataSet.ClienteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -873,9 +924,9 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Saurus_BancoDataSet.Saurus_tabela_clientesDataTable GetData() {
+        public virtual Saurus_BDDataSet.ClienteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Saurus_BancoDataSet.Saurus_tabela_clientesDataTable dataTable = new Saurus_BancoDataSet.Saurus_tabela_clientesDataTable();
+            Saurus_BDDataSet.ClienteDataTable dataTable = new Saurus_BDDataSet.ClienteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -883,15 +934,15 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Saurus_BancoDataSet.Saurus_tabela_clientesDataTable dataTable) {
+        public virtual int Update(Saurus_BDDataSet.ClienteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Saurus_BancoDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Saurus_tabela_clientes");
+        public virtual int Update(Saurus_BDDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Cliente");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -913,21 +964,32 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Numero_interno, string Original_CPF, string Original_Nome, System.DateTime Original_Data_Nascimento) {
+        public virtual int Delete(int Original_Numero_interno, string Original_CPF, string Original_Nome, global::System.Nullable<global::System.DateTime> Original_Data_Nascimento) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Numero_interno));
             if ((Original_CPF == null)) {
-                throw new global::System.ArgumentNullException("Original_CPF");
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CPF));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CPF));
             }
             if ((Original_Nome == null)) {
-                throw new global::System.ArgumentNullException("Original_Nome");
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Nome));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Nome));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Data_Nascimento));
+            if ((Original_Data_Nascimento.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Data_Nascimento.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -948,20 +1010,25 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string CPF, string Nome, System.DateTime Data_Nascimento) {
+        public virtual int Insert(string CPF, string Nome, global::System.Nullable<global::System.DateTime> Data_Nascimento) {
             if ((CPF == null)) {
-                throw new global::System.ArgumentNullException("CPF");
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(CPF));
             }
             if ((Nome == null)) {
-                throw new global::System.ArgumentNullException("Nome");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nome));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data_Nascimento));
+            if ((Data_Nascimento.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data_Nascimento.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -982,35 +1049,51 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CPF, string Nome, System.DateTime Data_Nascimento, int Original_Numero_interno, string Original_CPF, string Original_Nome, System.DateTime Original_Data_Nascimento, int Numero_interno) {
+        public virtual int Update(string CPF, string Nome, global::System.Nullable<global::System.DateTime> Data_Nascimento, int Original_Numero_interno, string Original_CPF, string Original_Nome, global::System.Nullable<global::System.DateTime> Original_Data_Nascimento, int Numero_interno) {
             if ((CPF == null)) {
-                throw new global::System.ArgumentNullException("CPF");
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(CPF));
             }
             if ((Nome == null)) {
-                throw new global::System.ArgumentNullException("Nome");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nome));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Data_Nascimento));
+            if ((Data_Nascimento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Data_Nascimento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Numero_interno));
             if ((Original_CPF == null)) {
-                throw new global::System.ArgumentNullException("Original_CPF");
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_CPF));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_CPF));
             }
             if ((Original_Nome == null)) {
-                throw new global::System.ArgumentNullException("Original_Nome");
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Nome));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Nome));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Data_Nascimento));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Numero_interno));
+            if ((Original_Data_Nascimento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Data_Nascimento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Numero_interno));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1031,7 +1114,7 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CPF, string Nome, System.DateTime Data_Nascimento, int Original_Numero_interno, string Original_CPF, string Original_Nome, System.DateTime Original_Data_Nascimento) {
+        public virtual int Update(string CPF, string Nome, global::System.Nullable<global::System.DateTime> Data_Nascimento, int Original_Numero_interno, string Original_CPF, string Original_Nome, global::System.Nullable<global::System.DateTime> Original_Data_Nascimento) {
             return this.Update(CPF, Nome, Data_Nascimento, Original_Numero_interno, Original_CPF, Original_Nome, Original_Data_Nascimento, Original_Numero_interno);
         }
     }
@@ -1048,7 +1131,7 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         
         private UpdateOrderOption _updateOrder;
         
-        private Saurus_tabela_clientesTableAdapter _saurus_tabela_clientesTableAdapter;
+        private ClienteTableAdapter _clienteTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1070,12 +1153,12 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Saurus_tabela_clientesTableAdapter Saurus_tabela_clientesTableAdapter {
+        public ClienteTableAdapter ClienteTableAdapter {
             get {
-                return this._saurus_tabela_clientesTableAdapter;
+                return this._clienteTableAdapter;
             }
             set {
-                this._saurus_tabela_clientesTableAdapter = value;
+                this._clienteTableAdapter = value;
             }
         }
         
@@ -1098,9 +1181,9 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._saurus_tabela_clientesTableAdapter != null) 
-                            && (this._saurus_tabela_clientesTableAdapter.Connection != null))) {
-                    return this._saurus_tabela_clientesTableAdapter.Connection;
+                if (((this._clienteTableAdapter != null) 
+                            && (this._clienteTableAdapter.Connection != null))) {
+                    return this._clienteTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1115,7 +1198,7 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._saurus_tabela_clientesTableAdapter != null)) {
+                if ((this._clienteTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1127,14 +1210,14 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(Saurus_BancoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Saurus_BDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._saurus_tabela_clientesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Saurus_tabela_clientes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._saurus_tabela_clientesTableAdapter.Update(updatedRows));
+                    result = (result + this._clienteTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1146,13 +1229,13 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(Saurus_BancoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Saurus_BDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._saurus_tabela_clientesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Saurus_tabela_clientes.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._saurus_tabela_clientesTableAdapter.Update(addedRows));
+                    result = (result + this._clienteTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1164,13 +1247,13 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(Saurus_BancoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Saurus_BDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._saurus_tabela_clientesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Saurus_tabela_clientes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._saurus_tabela_clientesTableAdapter.Update(deletedRows));
+                    result = (result + this._clienteTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1206,15 +1289,15 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(Saurus_BancoDataSet dataSet) {
+        public virtual int UpdateAll(Saurus_BDDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._saurus_tabela_clientesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._saurus_tabela_clientesTableAdapter.Connection) == false))) {
+            if (((this._clienteTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._clienteTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1250,13 +1333,13 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._saurus_tabela_clientesTableAdapter != null)) {
-                    revertConnections.Add(this._saurus_tabela_clientesTableAdapter, this._saurus_tabela_clientesTableAdapter.Connection);
-                    this._saurus_tabela_clientesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._saurus_tabela_clientesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._saurus_tabela_clientesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._saurus_tabela_clientesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._saurus_tabela_clientesTableAdapter.Adapter);
+                if ((this._clienteTableAdapter != null)) {
+                    revertConnections.Add(this._clienteTableAdapter, this._clienteTableAdapter.Connection);
+                    this._clienteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._clienteTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._clienteTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._clienteTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._clienteTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1317,9 +1400,9 @@ SELECT Numero_interno, CPF, Nome, Data_Nascimento FROM Saurus_tabela_clientes WH
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._saurus_tabela_clientesTableAdapter != null)) {
-                    this._saurus_tabela_clientesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._saurus_tabela_clientesTableAdapter]));
-                    this._saurus_tabela_clientesTableAdapter.Transaction = null;
+                if ((this._clienteTableAdapter != null)) {
+                    this._clienteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._clienteTableAdapter]));
+                    this._clienteTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
